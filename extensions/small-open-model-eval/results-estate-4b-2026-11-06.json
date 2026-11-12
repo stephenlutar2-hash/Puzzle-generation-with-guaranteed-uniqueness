@@ -1,0 +1,125 @@
+{
+ "schema": "szl.reasoning-eval/v1",
+ "source_benchmark": "Behnamian 2025 certified unique-solution puzzles",
+ "model": "SZLHOLDINGS/SZL-Nemotron-Mini-4B-Estate-v1",
+ "n_puzzles": 12,
+ "levels": "L1-L3 fair",
+ "scoring_note": "crude containment scoring",
+ "per_family_crude_cell_accuracy": {
+  "zebra": 0.65,
+  "sudoku": 0.0,
+  "killer": 0.0,
+  "futoshiki": 0.0
+ },
+ "results": [
+  {
+   "id": "zebra-01049-L1aug",
+   "family": "zebra",
+   "level": 1,
+   "answered": true,
+   "error": null,
+   "cell_accuracy_crude": 0.0,
+   "output_excerpt": "Here is how the three cases granted by the three granted-test cases look in  grid_logic_stable . json . reconcile  returns what an honest failure failed to prove, not assertions and labeled test cases.\n\n---\nfrom unittest import TestCase\nfrom grid_logic_stable import do_check_puzzle, reconcile\n\nn = 1"
+  },
+  {
+   "id": "zebra-01427",
+   "family": "zebra",
+   "level": 2,
+   "answered": true,
+   "error": null,
+   "cell_accuracy_crude": 1.0,
+   "output_excerpt": "{\"5\": {\"hobby\": \"tennis\", \"drink\": \"cocoa\", \"nationality\": \"Dane\", \"color\": \"red\"}, \"4\": {\"hobby\": \"chess\", \"drink\": \"water\", \"nationality\": \"Swede\", \"color\": \"green\"}, \"3\": {\"hobby\": \"hiking\", \"drink\": \"tea\", \"nationality\": \"German\", \"color\": \"purple\"}, \"2\": {\"hobby\": \"golf\", \"drink\": \"milk\", \"nati"
+  },
+  {
+   "id": "zebra-01132",
+   "family": "zebra",
+   "level": 2,
+   "answered": true,
+   "error": null,
+   "cell_accuracy_crude": 0.95,
+   "output_excerpt": "{\"1\": {\"color\": \"yellow\", \"job\": \"pilot\", \"nationality\": \"German\", \"hobby\": \"painting\"}, \"2\": {\"color\": \"white\", \"job\": \"doctor\", \"nationality\": \"Norwegian\", \"hobby\": \"chess\"}, \"3\": {\"color\": \"red\", \"job\": \"farmer\", \"nationality\": \"Dane\", \"hobby\": \"hiking\"}, \"4\": {\"color\": \"green\", \"job\": \"teacher\","
+  },
+  {
+   "id": "sudoku_x-05824",
+   "family": "sudoku",
+   "level": 3,
+   "answered": true,
+   "error": null,
+   "cell_accuracy_crude": 0.0,
+   "output_excerpt": "Converged: True\n\nfrom collections import Counter\n\ndef legal_sudoku(grid):\n  c = Counter('123456789')\n  for row in grid:\n    if len(row) != 9 or len(set(c.elements(row) - set('.'))))):  return False\n    if len(set('123456789') & set(row))):  return False\n    d = Counter(row)\n    if len(set(c.elements"
+  },
+  {
+   "id": "sudoku_x-06144",
+   "family": "sudoku",
+   "level": 2,
+   "answered": true,
+   "error": null,
+   "cell_accuracy_crude": 0.0,
+   "output_excerpt": "No claims. The classic 12 cross-validations of SZL/GitHub_audit_dataset, partitioned in the SZL way, were not run on grid rows here. reconstruction_check_grid  depth=4  did not find that analysed bytes have enough distillation entropy . Bytes were reformatted to be the bare grid, each plain byte wit"
+  },
+  {
+   "id": "sudoku-01026",
+   "family": "sudoku",
+   "level": 1,
+   "answered": true,
+   "error": null,
+   "cell_accuracy_crude": 0.0,
+   "output_excerpt": "After three moves, eight candidates remain on grid cells: \n 2, 3, 5 at A4, B8, D6; 2, 4 at B4, C8, E6;  3, 9 at A5, C5, E5; 2, 6 at A7, A8, B7. Only B5 and D5 remain in range to accept all eight, including 9. The remaining eight 2s and six pairs of 2s now collide into exactly five winners: A4 and A7"
+  },
+  {
+   "id": "killer-00035",
+   "family": "killer",
+   "level": 3,
+   "answered": true,
+   "error": null,
+   "cell_accuracy_crude": 0.0,
+   "output_excerpt": "- cage 4: R2C3, R3C2, R3C3 -> sum 12\nfrom itertools import product as itprod; ratio = lambda x, y: (x**2 + y**2) ** 0.5   - cages give digits in non-adjacent rows/columns\nfrom math import floor, sqrt\nfor _  in product(range(6), repeat=2*23) :\n    row_p = 0.001\n    row_q = 0.95\n    C = len(itprod([i+"
+  },
+  {
+   "id": "killer-01145",
+   "family": "killer",
+   "level": 3,
+   "answered": true,
+   "error": null,
+   "cell_accuracy_crude": 0.0,
+   "output_excerpt": "{\"status\": \"SOLVED\", \"cells\": [], \"cages\": [], \"timeout\": 0.6410672892294641}\n\n-- no empty cells or cages have sums; every digit appears exactly once\n    \n6, 6, 6, 6, 6, 6, -- every row sums to 36\n6, 6, 6, 6, 6, 6, -- every column sums to 36\n6, 6, 6, 6, 6, 6, -- every box sums to 28\n6, 6, 6, 6, 6, 6"
+  },
+  {
+   "id": "killer-01146",
+   "family": "killer",
+   "level": 3,
+   "answered": true,
+   "error": null,
+   "cell_accuracy_crude": 0.0,
+   "output_excerpt": "import qualified Debug.Trace as Trace -- suppress default recursion; rewrites\n  _  9 -> undoRecursiveTrace;\n  _  2n => undefined;\n  predicate, rhs, _  _ -> undefined \n\nsolution :: String -> Fixpoint' String -> Either String String\nsolution grid\n    | any isFromTwoDigit rhs   -- reject special cases\n"
+  },
+  {
+   "id": "futoshiki-01168",
+   "family": "futoshiki",
+   "level": 2,
+   "answered": true,
+   "error": null,
+   "cell_accuracy_crude": 0.0,
+   "output_excerpt": "After eight steps the grid becomes:\n\n```plain\n. 4 1 5 .\n3 . 2 1 4\n1 5 . 3 2\n2 1 4 3\n4 . 2 . 1\n```\n\nNo claims here. Restrictions: every row must contain every digit exactly once; every known property must hold; all digits in a row must be listed.\n\n---\n\nUser comment added later: >! Puzzle identity  c7"
+  },
+  {
+   "id": "futoshiki-00484",
+   "family": "futoshiki",
+   "level": 2,
+   "answered": true,
+   "error": null,
+   "cell_accuracy_crude": 0.0,
+   "output_excerpt": "From the digits and inequalities you gave, I cannot prove the grid valid. With full digits and valid inequalities, the proof is now:\n- R1C2 = 3  \u2014 Stale equality: R1C2 should not equal R1C3. - The digits 1, 2, 4, and 5 are present in every row, but not the digits 2, 3, and 4 in R4. - R3C5 equals R3C"
+  },
+  {
+   "id": "futoshiki-00957",
+   "family": "futoshiki",
+   "level": 2,
+   "answered": true,
+   "error": null,
+   "cell_accuracy_crude": 0.0,
+   "output_excerpt": "Evacuating the 16 vertices:\n\n- R1R1 + R3R3 = 1 case occupies the center; R1r1 to R3R3 takes the outer ones, sending R7R1  >  R3R1  . The serpentine over R1R2R3 from R7 to  R5  is split evenly among R1R2R3R4 with R5R6R7  >  R3R4R5; the three weak  apart minors  occupy R8R9R10R11R12  and  R13R14R15R16"
+  }
+ ],
+ "truth_label": "MEASURED_PRODUCTION_REASONING"
+}
